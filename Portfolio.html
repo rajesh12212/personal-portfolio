@@ -784,6 +784,41 @@
       transform: translateY(-2px);
     }
 
+    .cv-download {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      gap: 10px;
+      margin-top: 24px;
+      padding: 10px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      border-radius: 11px;
+      background: #f8f8f8;
+      color: #191919;
+      font-size: 0.84rem;
+      font-weight: 700;
+      font-variant: normal;
+      text-decoration: none;
+      transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .cv-download svg {
+      width: 18px;
+      height: 18px;
+      color: var(--accent-color);
+    }
+
+    .cv-download:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent-color);
+      background: #ffffff;
+    }
+
+    .cv-download:focus-visible {
+      outline: 2px solid var(--accent-color);
+      outline-offset: 3px;
+    }
+
     /* Work Process Timeline */
     .process-timeline {
       display: flex;
@@ -1741,6 +1776,12 @@
               <span class="skill-pill">VRay</span>
               <span class="skill-pill">ISO 19650</span>
             </div>
+            <a class="cv-download" href="Rajeshasooti_Resume.pdf" download>
+              <span>Download CV</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 19h14"/>
+              </svg>
+            </a>
           </div>
 
           <!-- Column 2: Work Process -->
@@ -1871,7 +1912,6 @@
             <h2 class="section-title">Shaping<br>Experiences That<br>Make Life Simpler</h2>
           </div>
           <div class="behind-header-right">
-            <p class="section-desc">I'm a BIM Modeller driven by design, detail, and innovation — crafting intelligent building models with Revit, AutoCAD, and coordinated BIM workflows.</p>
             <div class="action-row">
               <span class="action-caption">Let's Build Something Meaningful Together</span>
               <a href="#contact" class="btn-pill-orange">
