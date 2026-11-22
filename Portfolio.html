@@ -608,6 +608,85 @@
       padding: 100px 48px 90px;
     }
 
+    .about-intro {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      align-items: center;
+      gap: 56px;
+      margin-bottom: 72px;
+      padding-bottom: 68px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .about-illustration {
+      width: 100%;
+      max-width: 480px;
+      aspect-ratio: 1.5;
+      margin: 0 auto;
+      border: 1px solid var(--card-border);
+      border-radius: 28px;
+      background: radial-gradient(ellipse at 50% 70%, rgba(255, 87, 34, 0.12), transparent 68%), rgba(18, 18, 22, 0.5);
+      overflow: hidden;
+    }
+
+    .about-illustration svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .about-title {
+      position: relative;
+      margin: 0 0 22px;
+      color: #ffffff;
+      font-size: clamp(2rem, 3vw, 2.7rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+
+    .about-title::after {
+      position: absolute;
+      bottom: -9px;
+      left: 0;
+      width: 38px;
+      height: 3px;
+      border-radius: 3px;
+      background: var(--accent-color);
+      content: "";
+    }
+
+    .about-description {
+      max-width: 650px;
+      margin: 0 0 30px;
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      line-height: 1.8;
+    }
+
+    .about-traits {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px 14px;
+      list-style: none;
+    }
+
+    .about-trait {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 0.78rem;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .about-trait svg {
+      width: 21px;
+      height: 21px;
+      flex: 0 0 21px;
+      color: var(--accent-color);
+    }
+
     .experience-grid {
       display: grid;
       grid-template-columns: 1.25fr 1.35fr 1fr;
@@ -1285,6 +1364,10 @@
         grid-template-columns: 1fr 1fr;
         gap: 36px;
       }
+      .about-intro {
+        grid-template-columns: 0.85fr 1.15fr;
+        gap: 36px;
+      }
       .quote-card {
         grid-column: span 2;
         min-height: auto;
@@ -1350,6 +1433,15 @@
         grid-template-columns: 1fr;
         gap: 36px;
       }
+      .about-intro {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 56px;
+        padding-bottom: 52px;
+      }
+      .about-illustration {
+        max-width: 440px;
+      }
       .quote-card {
         grid-column: span 1;
       }
@@ -1384,6 +1476,13 @@
       .welcome-role {
         font-size: 0.6rem;
         letter-spacing: 0.12em;
+      }
+      .about-traits {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px 12px;
+      }
+      .about-trait {
+        font-size: 0.72rem;
       }
       .hero-services-grid {
         grid-template-columns: 1fr;
@@ -1547,6 +1646,64 @@
     <!-- Education, Skills & Work Process Section -->
     <section class="experience-section" id="about">
       <div class="section-container">
+        <div class="about-intro">
+          <div class="about-illustration">
+            <svg viewBox="0 0 480 320" role="img" aria-labelledby="about-illustration-title">
+              <title id="about-illustration-title">Illustration of a BIM modeller working on building plans</title>
+              <path d="M42 271h396" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2"/>
+              <path d="M70 233V105a78 78 0 0 1 156 0v128" fill="none" stroke="#fff" stroke-opacity=".2" stroke-width="3"/>
+              <path d="M148 29v204M70 112h156" fill="none" stroke="#fff" stroke-opacity=".14" stroke-width="2"/>
+              <path d="M90 186h42v-38h26v38h45" fill="none" stroke="#ff5722" stroke-opacity=".6" stroke-width="3" stroke-linejoin="round"/>
+              <path d="M88 202h118" fill="none" stroke="#fff" stroke-opacity=".22" stroke-width="2"/>
+              <path d="M269 270c-4-38 4-65 25-84 14-13 34-18 50-12 17 6 24 24 28 44l9 52" fill="#222126" stroke="#f1eee9" stroke-opacity=".75" stroke-width="3"/>
+              <path d="M285 228c18-14 40-15 58-5l20 48h-78z" fill="#ff5722"/>
+              <path d="M304 166c-2-29 13-47 37-47 25 0 38 18 35 45-2 22-15 39-35 39-21 0-35-16-37-37Z" fill="#e9b18b"/>
+              <path d="M303 161c-8-28 1-51 26-59 24-8 47 4 51 24 2 10-1 16-8 20-7-12-19-17-31-13-9 3-16 10-23 21l-4 16z" fill="#211e20"/>
+              <path d="M359 169c7 2 12 0 15-4" fill="none" stroke="#34251f" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="353" cy="158" r="2.5" fill="#34251f"/>
+              <path d="M323 203c6 8 15 13 27 13 11 0 20-4 27-12" fill="none" stroke="#e9b18b" stroke-width="6" stroke-linecap="round"/>
+              <path d="M286 227c-15 15-25 31-31 45M361 225c15 12 22 26 26 43" fill="none" stroke="#e9b18b" stroke-width="10" stroke-linecap="round"/>
+              <path d="M224 261h207v11H224z" fill="#f1eee9" fill-opacity=".85"/>
+              <path d="M244 272v26m166-26v26" fill="none" stroke="#f1eee9" stroke-opacity=".7" stroke-width="4"/>
+              <rect x="265" y="228" width="75" height="36" rx="4" fill="#17171a" stroke="#f1eee9" stroke-opacity=".8" stroke-width="3"/>
+              <path d="M276 237h53v20h-53z" fill="#ff5722" fill-opacity=".2"/>
+              <path d="M282 252h17m6 0h18m-41-8h14m6 0h21" stroke="#ff9a76" stroke-opacity=".8" stroke-width="2"/>
+              <path d="M232 250h-21v20h21m166-20h20v20h-20" fill="none" stroke="#ff5722" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M95 255h72m-64-9h58" stroke="#fff" stroke-opacity=".28" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="about-copy">
+            <h2 class="about-title">About Me</h2>
+            <p class="about-description">I'm a BIM modeller with a Civil Engineering background, focused on creating clear, coordinated building models and practical architectural and structural solutions. I enjoy turning project requirements into accurate, well-organized drawings and models using Revit, AutoCAD, and collaborative BIM workflows.</p>
+            <ul class="about-traits">
+              <li class="about-trait">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6m-5 4h4m-2-20a7 7 0 0 0-4 12.7c.8.6 1 1.2 1 2.3h6c0-1.1.2-1.7 1-2.3A7 7 0 0 0 12 2Z"/><path d="M12 5v2m-4 1 1 1m7-1-1 1"/></svg>
+                <span>Problem Solver</span>
+              </li>
+              <li class="about-trait">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/><path d="m16 8 5-5"/></svg>
+                <span>Detail Oriented</span>
+              </li>
+              <li class="about-trait">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 16-4 4 1-6a8 8 0 1 1 3 2Z"/><path d="m9 12 2 2 4-5"/></svg>
+                <span>BIM Coordination</span>
+              </li>
+              <li class="about-trait">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/><path d="m10 8 2 2 4-4"/></svg>
+                <span>Always Learning</span>
+              </li>
+              <li class="about-trait">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9m-1-11.8a4 4 0 0 1 0 7.8"/></svg>
+                <span>Team Player</span>
+              </li>
+              <li class="about-trait">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4m-5-8v6m-3-3h6"/></svg>
+                <span>Curious Mind</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
         <div class="experience-grid">
 
           <!-- Column 1: Education & Skills -->
